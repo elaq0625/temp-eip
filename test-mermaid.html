@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid 테스트</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        .mermaid {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mermaid 테스트</h1>
+    <div id="content"></div>
+
+    <script>
+        // Mermaid 초기화
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            }
+        });
+
+        // 테스트용 Markdown 내용
+        const testContent = `
+**테스트 내용**
+
+\`\`\`mermaid
+graph TD
+    A[시작] --> B[처리]
+    B --> C{조건?}
+    C -->|Yes| D[성공]
+    C -->|No| E[실패]
+\`\`\`
+
+일반 텍스트
+`;
+
+        // Mermaid 코드 블록 처리
+        function processMermaidCodeBlocks(content) {
+            return content.replace(/```mermaid\s*([\s\S]*?)\s*```/g, (match, code) => {
+                return `<div class="mermaid">${code.trim()}</div>`;
+            });
+        }
+
+        // Mermaid 다이어그램 렌더링
+        async function renderMermaidDiagrams(container) {
+            const mermaidElements = container.querySelectorAll('.mermaid');
+            for (let i = 0; i < mermaidElements.length; i++) {
+                const element = mermaidElements[i];
+                try {
+                    const graphDefinition = element.textContent;
+                    const { svg } = await mermaid.render(`mermaid-${Date.now()}-${i}`, graphDefinition);
+                    element.innerHTML = svg;
+                } catch (error) {
+                    console.error('Mermaid rendering error:', error);
+                    element.innerHTML = '<p style="color: red;">다이어그램 렌더링 오류</p>';
+                }
+            }
+        }
+
+        // 실행
+        const contentDiv = document.getElementById('content');
+        const processedContent = processMermaidCodeBlocks(testContent);
+        contentDiv.innerHTML = marked.parse(processedContent);
+        renderMermaidDiagrams(contentDiv);
+    </script>
+</body>
+</html> 

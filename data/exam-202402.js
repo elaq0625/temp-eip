@@ -1,0 +1,1448 @@
+const EXAM_DATA_202402 = {
+    "year": "2024",
+    "round": 2,
+    "categories": [
+        {
+            "id": 1,
+            "name": "제1과목 : 소프트웨어 설계",
+            "range": {
+                "start": 1,
+                "end": 20
+            }
+        },
+        {
+            "id": 2,
+            "name": "제2과목 : 소프트웨어 개발",
+            "range": {
+                "start": 21,
+                "end": 40
+            }
+        },
+        {
+            "id": 3,
+            "name": "제3과목 : 데이터베이스 구축",
+            "range": {
+                "start": 41,
+                "end": 60
+            }
+        },
+        {
+            "id": 4,
+            "name": "제4과목 : 프로그래밍 언어 활용",
+            "range": {
+                "start": 61,
+                "end": 80
+            }
+        },
+        {
+            "id": 5,
+            "name": "제5과목 : 정보시스템 구축 관리",
+            "range": {
+                "start": 81,
+                "end": 100
+            }
+        }
+    ],
+    "questions": [
+        {
+            "category_id": 1,
+            "question_number": 1,
+            "question_type": "multiple_choice",
+            "question_description": "요구공학(Requirements Engineering)에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "무엇을 개발해야 하는지 요구사항을 정의하고, 분석 및 관리하는 프로세스를 연구하는 학문이다.",
+                "2": "사용자 요구사항이 더욱 복잡해지고 잦은 변경이 발생하자 이를 적절하게 관리하기 위해 등장하였다.",
+                "3": "요구사항 개발의 한 요소이다.",
+                "4": "품질 개선과 프로젝트 실패의 최소화를 목적으로 한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 2,
+            "question_type": "multiple_choice",
+            "question_description": "XP(eXtreme Programming)에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "릴리즈 기간을 짧게 반복하여 고객의 요구 변화에 빠르게 대응한다.",
+                "2": "코드들은 하나의 작업이 마무리될 때마다 지속적으로 통합한다.",
+                "3": "테스트가 지속적으로 진행될 수 있도록 테스트 자동화 도구를 사용한다.",
+                "4": "개발 책임자가 모든 책임을 가지므로 팀원들은 책임 없이 자유로운 개발이 가능하다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 3,
+            "question_type": "multiple_choice",
+            "question_description": "UML에서 활용되는 다이어그램의 이름과 설명의 연결이 올바르지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "클래스 다이어그램 : 시퀀스 다이어그램과 같이 동작에 참여하는 객체들이 주고받는 메시지를 표현하는데, 메시지뿐만 아니라 객체들 간의 연관까지 표현한다.",
+                "2": "배치 다이어그램 : 결과물, 프로세스, 컴포넌트 등 물리적 요소들의 위치를 표현한다.",
+                "3": "유스케이스 다이어그램 : 사용자의 요구를 분석하는 것으로, 기능 모델링 작업에 사용한다.",
+                "4": "활동 다이어그램 : 시스템이 어떤 기능을 수행하는지 객체의 처리 로직이나 조건에 따른 처리의 흐름을 순서에 따라 표현한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 4,
+            "question_type": "multiple_choice",
+            "question_description": "다음 설명에 해당하는 도표는?",
+            "additional_content": "시스템의 기능을 여러 개의 고유 모듈들로 분할하여 이들 간의 인터페이스를 계층 구조로 표현한 것으로, 가시적 도표(Visual Table of Contents), 총체적 도표(Overview Diagram), 세부적 도표(Detail Diagram)가 있다.",
+            "choices": {
+                "1": "Flow Chart",
+                "2": "Burn-down Chart",
+                "3": "Visual Diagram",
+                "4": "HIPO Chart"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 5,
+            "question_type": "multiple_choice",
+            "question_description": "불필요한 메모리의 낭비를 최소화하기 위해 여러 프로세스가 동시에 참조할 수는 없지만 어디서든 참조할 수 있는 객체를 생성하는 디자인 패턴은?",
+            "additional_content": null,
+            "choices": {
+                "1": "싱글톤(Singleton) 패턴",
+                "2": "옵서버(Observer) 패턴",
+                "3": "프로토타입(Prototype) 패턴",
+                "4": "상태(State) 패턴"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 6,
+            "question_type": "multiple_choice",
+            "question_description": "객체지향 기법에서 객체가 메시지를 받아 실행해야 할 객체의 구체적인 연산을 정의한 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Entity",
+                "2": "Method",
+                "3": "Instance",
+                "4": "Class"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 7,
+            "question_type": "multiple_choice",
+            "question_description": "바람직한 소프트웨어 설계 지침이 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "결합도를 최소화하고 응집도를 최대화한다.",
+                "2": "복잡도와 중복성을 줄이고 일관성을 유지시킨다.",
+                "3": "하나의 입구와 하나의 출구를 갖도록 해야 한다.",
+                "4": "모듈의 크기를 가능한 작게 구성하여 병행성 수준을 높여야 한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 8,
+            "question_type": "multiple_choice",
+            "question_description": "객체지향 설계 원칙에 대한 설명 중 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "OCP: 기존의 코드를 변경하지 않고 기능을 추가할 수 있도록 설계해야 한다는 원칙",
+                "2": "LSP : 자식 클래스는 최소한 자신의 부모 클래스에서 가능한 행위는 수행할 수 있어야 한다는 설계 원칙",
+                "3": "DIP : 각 객체들 간의 의존 관계가 성립될 때, 추상성이 낮은 클래스보다 추상성이 높은 클래스와 의존 관계를 맺어야 한다는 원칙",
+                "4": "ISP : 객체는 단 하나의 책임만 가져야 한다는 원칙"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 9,
+            "question_type": "multiple_choice",
+            "question_description": "객체지향 분석 방법론 중 미시적(Micro) 개발 프로세스와 거시적(Macro) 개발 프로세스를 모두 사용하는 분석 방법으로, 클래스와 객체들을 분석 및 식별하고 클래스의 속성과 연산을 정의하는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Coad와 Yourdon 방법",
+                "2": "Booch 방법",
+                "3": "Jacobson 방법",
+                "4": "Wirfs-Brocks 방법"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 10,
+            "question_type": "multiple_choice",
+            "question_description": "HIPO Chart에 대한 설명으로 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "HIPO 차트 종류에는 가시적 도표, 총체적 도표, 세부적 도표가 있다.",
+                "2": "충분한 사전 지식과 학습이 없으면 이해하기 어렵다.",
+                "3": "기능과 자료의 의존 관계를 동시에 표현할 수 있다.",
+                "4": "하향식 소프트웨어 개발을 위한 문서화 도구이다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 1,
+            "question_number": 11,
+            "question_type": "multiple_choice",
+            "question_description": "코드 설계에서 코드화 대상 항목의 성질, 즉 길이, 넓이, 부피, 지름, 높이 등의 물리적 수치를 그대로 코드에 적용시키는 방식의 코드는?",
+            "additional_content": null,
+            "choices": {
+                "1": "연상 코드",
+                "2": "블록 코드",
+                "3": "순차 코드",
+                "4": "표의 숫자 코드"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 12,
+            "question_type": "multiple_choice",
+            "question_description": "애자일(Agile) 소프트웨어 개발 방법론의 가치가 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "계획을 따르는 것보다 변화에 대응하는 것을 가치 있게 여긴다.",
+                "2": "작동하는 소프트웨어보다 포괄적인 문서를 가치 있게 여긴다.",
+                "3": "계약 협상보다 고객과의 협력을 가치 있게 여긴다.",
+                "4": "프로세스와 도구보다 개인과 상호작용을 가치 있게 여긴다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 13,
+            "question_type": "multiple_choice",
+            "question_description": "Rayleigh-Norden 곡선의 노력 분포를 사용하는 프로젝트 비용 추정 기법은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Putnam Model",
+                "2": "Delphi Model",
+                "3": "COCOMO Model",
+                "4": "Function Point Model"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 14,
+            "question_type": "multiple_choice",
+            "question_description": "객체지향 프로그래밍의 핵심 개념에 대한 설명 중 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "상속(Inheritance) : 기존 클래스의 속성과 메서드를 새로운 클래스가 재사용할 수 있게 하는 기법",
+                "2": "객체(Object) : 데이터와 그 데이터를 처리하는 함수를 하나로 묶은 소프트웨어 모듈",
+                "3": "캡슐화(Encapsulation) : 객체의 내부 구조를 숨기고 외부에서 접근할 수 있는 인터페이스만 제공하는 기법",
+                "4": "다형성(Polymorphism) : 같은 이름의 메서드가 다른 클래스에서 다른 기능을 수행하는 기법"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 15,
+            "question_type": "multiple_choice",
+            "question_description": "웹 애플리케이션 서버(WAS)에 대한 설명 중 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "정적 콘텐츠 처리에 주로 사용된다.",
+                "2": "웹 환경에서 사용되는 미들웨어이다.",
+                "3": "JAVA/EJB 기반의 미션 크리티컬 엔터프라이즈 애플리케이션을 지원한다.",
+                "4": "Oracle WebLogic, IBM WebSphere 등이 대표적인 WAS이다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 16,
+            "question_type": "multiple_choice",
+            "question_description": "유스케이스 다이어그램의 구성 요소가 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "System",
+                "2": "Actor",
+                "3": "Operation",
+                "4": "UseCase"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 17,
+            "question_type": "multiple_choice",
+            "question_description": "폭포수 모델(Waterfall Model)의 특징과 가장 거리가 먼 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "순차적 접근 방식으로 개발한다.",
+                "2": "나선형 모델의 단점을 보완하기 위해 등장하였다.",
+                "3": "각 단계별로 명확한 정의와 산출물을 가진다.",
+                "4": "많은 적용 경험과 성공 사례를 가지고 있다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 18,
+            "question_type": "multiple_choice",
+            "question_description": "데이터 송수신 처리 방식 중 대용량 데이터를 처리하는 방법은?",
+            "additional_content": null,
+            "choices": {
+                "1": "실시간 방식",
+                "2": "분산 처리 방식",
+                "3": "배치 방식",
+                "4": "지연 처리 방식"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 19,
+            "question_type": "multiple_choice",
+            "question_description": "결합도(Coupling)에 대한 설명 중 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "데이터 결합도는 모듈 간에 데이터만 전달되는 결합도이다.",
+                "2": "내용 결합도는 한 모듈이 다른 모듈의 내부 데이터나 처리 로직을 직접 참조하는 결합도이다.",
+                "3": "공통 결합도는 여러 모듈이 하나의 공통 데이터 영역을 공유하는 결합도이다.",
+                "4": "결합도는 모듈 간의 상호작용이나 의존 정도를 나타내는 척도이다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 20,
+            "question_type": "multiple_choice",
+            "question_description": "CASE(Computer Aided Software Engineering)의 주요 기능이 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "S/W 생명주기의 모든 단계를 연결한다.",
+                "2": "그래픽 지원을 제공한다.",
+                "3": "다양한 소프트웨어 개발 모델을 지원한다.",
+                "4": "언어 번역 기능을 제공한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 21,
+            "question_type": "multiple_choice",
+            "question_description": "테스트 하네스(Test Harness)의 구성 요소가 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Test Driver",
+                "2": "Test Step",
+                "3": "Test Case",
+                "4": "Test Scenario"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 22,
+            "question_type": "multiple_choice",
+            "question_description": "통합 개발 환경(IDE)에 대한 설명 중 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "IDE는 편집기, 컴파일러, 디버거 등을 포함한다.",
+                "2": "자동 코드 생성 기능을 제공한다.",
+                "3": "다운로드를 통해 기능을 추가할 수 있다.",
+                "4": "단일 플랫폼만 지원하는 제한이 있다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 23,
+            "question_type": "multiple_choice",
+            "question_description": "디지털 저작권 관리(DRM)에 대한 설명 중 가장 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "콘텐츠 관리 및 보호를 위한 기술이다.",
+                "2": "클리어링하우스에 라이선스 정보를 등록한다.",
+                "3": "패키징 전에 아날로그 콘텐츠를 변환한다.",
+                "4": "암호화, 식별, 크랙 방지, 인증 등의 기술을 사용한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 24,
+            "question_type": "multiple_choice",
+            "question_description": "스택에 A, B, C, D 순서로 입력 데이터가 들어있을 때, push → push → pop → push → pop → pop 연산을 수행한 결과 출력은?",
+            "additional_content": null,
+            "choices": {
+                "1": "C, B, D, A",
+                "2": "B, C, D, A",
+                "3": "B, C, A, D",
+                "4": "C, B, A, D"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 25,
+            "question_type": "multiple_choice",
+            "question_description": "EAI(Enterprise Application Integration) 구현 유형에 대한 설명 중 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Point-to-Point : 애플리케이션 간 직접 연결 방식",
+                "2": "Hub&Spoke : 중앙 허브를 통한 연결 방식",
+                "3": "ESB : 애플리케이션 간 미들웨어 방식",
+                "4": "Hybrid : Point-to-Point와 Hub&Spoke의 혼합 방식"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 26,
+            "question_type": "multiple_choice",
+            "question_description": "디지털 저작권 관리(DRM)의 구성 요소에 대한 설명 중 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Clearinghouse : 라이선스 정보를 관리하는 중앙 기관",
+                "2": "Packager : 콘텐츠를 패키징하는 도구",
+                "3": "DRM Controller : DRM 시스템을 제어하는 컨트롤러",
+                "4": "Security Container : 보안을 담당하는 컨테이너"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 27,
+            "question_type": "multiple_choice",
+            "question_description": "테스트 오라클(Test Oracle)에 대한 설명 중 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "모든 테스트 케이스에 테스트 오라클을 적용한다.",
+                "2": "애플리케이션 변경 시 일관성 검사 오라클을 사용한다.",
+                "3": "수학적 기법을 사용하여 테스트 오라클 값을 얻는다.",
+                "4": "테스트 프로그램 실행, 결과 비교, 커버리지 측정을 자동화한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 28,
+            "question_type": "multiple_choice",
+            "question_description": "버블 정렬을 이용한 오름차순 정렬 시 다음 자료에 대한 2회전 후의 결과는?",
+            "additional_content": "9, 6, 7, 3, 5",
+            "choices": {
+                "1": "3, 5, 6, 7, 9",
+                "2": "6, 7, 3, 5, 9",
+                "3": "3, 5, 9, 6, 7",
+                "4": "6, 3, 5, 7, 9"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 29,
+            "question_type": "multiple_choice",
+            "question_description": "형상 관리 도구의 주요 기능으로 거리가 먼 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "체크아웃(Check-out)",
+                "2": "체크인(Check-in)",
+                "3": "식별(Identification)",
+                "4": "커밋(Commit)"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 30,
+            "question_type": "multiple_choice",
+            "question_description": "목적에 따른 테스트 방식 중 시스템에 과도한 정보량이나 빈도 등을 부과하여 과부하 시에도 소프트웨어가 정상적으로 실행되는지를 확인하는 테스트는?",
+            "additional_content": null,
+            "choices": {
+                "1": "회복(Recovery) 테스트",
+                "2": "강도(Stress) 테스트",
+                "3": "성능(Performance) 테스트",
+                "4": "회귀(Regression) 테스트"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 31,
+            "question_type": "multiple_choice",
+            "question_description": "빌드 자동화 도구에 대한 설명으로 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Gradle은 실행할 처리 명령들을 모아 태스크로 만든 후 태스크 단위로 실행한다.",
+                "2": "Ant는 Groovy를 기반으로 한 오픈소스로 안드로이드 앱 개발 환경에서 사용된다.",
+                "3": "빌드 자동화 도구에는 Ant, Gradle, Jenkins 등이 있다.",
+                "4": "빌드 자동화 도구는 지속적인 통합개발환경에서 유용하게 활용된다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 32,
+            "question_type": "multiple_choice",
+            "question_description": "해싱 함수(Hashing Function)의 종류가 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "제곱법(mid-square)",
+                "2": "제산법(division)",
+                "3": "숫자분석법(digit analysis)",
+                "4": "개방주소법(open addressing)"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 33,
+            "question_type": "multiple_choice",
+            "question_description": "효과적인 모듈 설계를 위한 유의사항으로 거리가 먼 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "모듈 간의 결합도를 약하게 하면 모듈 독립성이 향상된다.",
+                "2": "하나의 입구와 하나의 출구를 갖도록 해야한다.",
+                "3": "모듈의 기능은 예측이 가능해야 하며 지나치게 제한적이어서는 안 된다.",
+                "4": "일관성을 줄이고 중복성을 유지시킨다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 34,
+            "question_type": "multiple_choice",
+            "question_description": "White Box Testing에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Base Path Testing, Boundary Value Analysis가 대표적인 기법이다.",
+                "2": "Source Code의 모든 문장을 한 번 이상 수행함으로써 진행된다.",
+                "3": "모듈 안의 작동을 직접 관찰할 수 있다.",
+                "4": "산출물의 각 기능별로 적절한 프로그램의 제어 구조에 따라 선택, 반복 등의 부분들을 수행함으로써 논리적 경로를 점검한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 35,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 워크스루(Walkthrough)와 인스펙션(Inspection)에 대한 설명으로 가장 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "워크스루는 전문가들에 의해 개발자의 작업 내역이 검토된다.",
+                "2": "워크스루는 제품 개발자가 주최가 된다.",
+                "3": "워크스루는 오류 발견과 발견된 오류의 문제 해결에 중점을 둔다.",
+                "4": "인스펙션은 워크스루를 발전시킨 형태이다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 36,
+            "question_type": "multiple_choice",
+            "question_description": "중위 표기법(Infix)의 수식 (A+B)*C+(D+E)을 후위 표기법(Postfix)으로 옳게 표기한 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "A B C D E * +",
+                "2": "A B + C D E * +",
+                "3": "+ A B * C + D E +",
+                "4": "+ * + A B C + D E"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 37,
+            "question_type": "multiple_choice",
+            "question_description": "다음 설명의 소프트웨어 버전 관리 도구 방식은?",
+            "additional_content": "• 버전 관리 자료가 원격 저장소와 로컬 저장소에 함께 저장되어 관리된다.\n• 로컬 저장소에서 버전 관리가 가능하므로 원격 저장소에 문제가 생겨도 로컬 저장소의 자료를 이용하여 작업할 수 있다.\n• 대표적인 버전 관리 도구로 Git이 있다.",
+            "choices": {
+                "1": "단일 저장소 방식",
+                "2": "분산 저장소 방식",
+                "3": "공유 폴더 방식",
+                "4": "클라이언트·서버 방식"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 38,
+            "question_type": "multiple_choice",
+            "question_description": "위험 모니터링의 의미로 옳은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "위험을 이해하는 것",
+                "2": "첫 번째 조치로 위험을 피할 수 있도록 하는 것",
+                "3": "위험 발생 후 즉시 조치하는 것",
+                "4": "위험 요소 징후들에 대하여 계속적으로 인지하는 것"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 39,
+            "question_type": "multiple_choice",
+            "question_description": "n개의 노드로 구성된 무방향 그래프의 최대 간선 수는?",
+            "additional_content": null,
+            "choices": {
+                "1": "n-1",
+                "2": "n/2",
+                "3": "n(n-1)/2",
+                "4": "n(n+1)"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 2,
+            "question_number": 40,
+            "question_type": "multiple_choice",
+            "question_description": "이진 검색 알고리즘에 대한 설명으로 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "탐색 효율이 좋고 탐색 시간이 적게 소요된다.",
+                "2": "검색할 데이터가 정렬되어 있어야 한다.",
+                "3": "피보나치 수열에 따라 다음에 비교할 대상을 선정하여 검색한다.",
+                "4": "비교횟수를 거듭할 때마다 검색 대상이 되는 데이터의 수가 절반으로 줄어든다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 41,
+            "question_type": "multiple_choice",
+            "question_description": "데이터 모델의 구성 요소가 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "속성(Attribute)",
+                "2": "연산(Operation)",
+                "3": "관계(Relationship)",
+                "4": "개체(Entity)"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 42,
+            "question_type": "multiple_choice",
+            "question_description": "시스템 카탈로그(System Catalog)에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "사용자, 객체에 대한 정의나 명세에 관한 정보를 유지 관리하는 시스템 테이블이다.",
+                "2": "일반 이용자도 SQL을 이용하여 내용을 검색하거나 수정할 수 있다.",
+                "3": "DBMS가 스스로 생성하고 유지한다.",
+                "4": "데이터 디렉터리, 번역기, 질의 최적화기 등으로 구성된다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 43,
+            "question_type": "multiple_choice",
+            "question_description": "관계대수에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "원하는 릴레이션을 정의하는 방법을 제공하며 비절차적 언어이다.",
+                "2": "릴레이션 조작을 위한 연산의 집합으로 피연산자와 결과가 모두 릴레이션이다.",
+                "3": "일반 집합 연산과 순수 관계 연산으로 구분된다.",
+                "4": "질의에 대한 해를 구하기 위해 수행해야 할 연산의 순서를 명시한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 44,
+            "question_type": "multiple_choice",
+            "question_description": "DML에 해당하는 것으로만 나열된 것은?",
+            "additional_content": "㉠ SELECT\n㉡ INSERT\n㉢ UPDATE\n㉣ GRANT",
+            "choices": {
+                "1": "㉠, ㉡, ㉢",
+                "2": "㉠, ㉡, ㉣",
+                "3": "㉠, ㉢, ㉣",
+                "4": "㉡, ㉢, ㉣"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 45,
+            "question_type": "multiple_choice",
+            "question_description": "개체 관계 모델에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "오너-멤버(Owner-Member) 관계라고도 한다.",
+                "2": "개체 타입과 이들 간의 관계 타입을 기본 요소로 이용하여 현실 세계를 개념적으로 표현한다.",
+                "3": "E-R 다이어그램에서 개체 타입은 사각형으로 나타낸다.",
+                "4": "E-R 다이어그램에서 속성은 타원으로 나타낸다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 46,
+            "question_type": "multiple_choice",
+            "question_description": "릴레이션에 R1에 속한 애트리뷰트의 조합인 외래키를 변경하려면 이를 참조하고 있는 R2의 릴레이션의 기본키도 변경해야 하는데 이를 무엇이라고 하는가?",
+            "additional_content": null,
+            "choices": {
+                "1": "정보 무결성",
+                "2": "고유 무결성",
+                "3": "키 제약성",
+                "4": "참조 무결성"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 47,
+            "question_type": "multiple_choice",
+            "question_description": "아래 그림에서 트리의 차수(degree)를 구하면?",
+            "additional_content": "```mermaid\ngraph TD\n    A --> B\n    A --> C\n    B --> D\n    B --> E\n    B --> F\n    C --> G\n    C --> H\n```",
+            "choices": {
+                "1": "2",
+                "2": "3",
+                "3": "4",
+                "4": "5"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 48,
+            "question_type": "multiple_choice",
+            "question_description": "정규화 과정 중 1NF에서 2NF가 되기 위한 조건은?",
+            "additional_content": null,
+            "choices": {
+                "1": "1NF를 만족하고 모든 도메인이 원자 값이어야 한다.",
+                "2": "1NF를 만족하고 키가 아닌 모든 애트리뷰트들이 기본 키에 이행적으로 함수 종속되지 않아야 한다.",
+                "3": "1NF를 만족하고 다치 종속이 제거되어야 한다.",
+                "4": "1NF를 만족하고 키가 아닌 모든 속성이 기본키에 완전 함수적 종속되어야 한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 49,
+            "question_type": "multiple_choice",
+            "question_description": "병행제어 기법 중 로킹에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "로킹의 대상이 되는 객체의 크기를 로킹 단위라고 한다.",
+                "2": "데이터베이스, 파일, 레코드 등은 로킹 단위가 될 수 있다.",
+                "3": "로킹의 단위가 작아지면 로킹 오버헤드가 증가한다.",
+                "4": "로킹의 단위가 커지면 데이터베이스 공유도가 증가한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 50,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 파티션에 대한 설명으로 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "파티셔닝으로 인해 쿼리 성능은 향상되지만, 백업 및 복구 속도는 느려진다.",
+                "2": "파티셔닝된 테이블은 물리적으로 별도의 세그먼트에 저장된다.",
+                "3": "파티션은 하나의 테이블을 작은 논리적 단위로 나눈 것이다.",
+                "4": "파티셔닝을 수행하면 데이터 가용성이 향상된다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 51,
+            "question_type": "multiple_choice",
+            "question_description": "다음 SQL 문에서 괄호 안에 들어갈 내용으로 옳은 것은?",
+            "additional_content": "```sql\nUPDATE MEMBER ( ) GRADE = 'GOLD'\nWHERE POINT >= 1000;\n```",
+            "choices": {
+                "1": "SET",
+                "2": "FROM",
+                "3": "INTO",
+                "4": "IN"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 52,
+            "question_type": "multiple_choice",
+            "question_description": "분산 데이터베이스 목표 중 \"데이터베이스의 분산된 물리적 환경에서 특정 지역의 컴퓨터 시스템이나 네트워크에 장애가 발생해도 데이터 무결성이 보장된다.\"는 것과 관계있는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "장애 투명성",
+                "2": "병행 투명성",
+                "3": "위치 투명성",
+                "4": "중복 투명성"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 53,
+            "question_type": "multiple_choice",
+            "question_description": "데이터베이스 설계 단계와 그 단계에서 수행되는 작업의 연결이 잘못된 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "요구 조건 분석 - 트랜잭션 모델링",
+                "2": "물리적 설계 단계 - 목표 DBMS에 맞는 물리적 구조 설계",
+                "3": "논리적 설계 단계 - 목표 DBMS에 종속적인 논리 스키마 설계",
+                "4": "구현 단계 - 목표 DBMS DDL로 스키마 작성"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 54,
+            "question_type": "multiple_choice",
+            "question_description": "다음 질의어를 SQL 문장으로 바르게 나타낸 것은? (단, 사원 테이블에 사원코드, 이름, 부서의 열이 있다고 가정한다.)",
+            "additional_content": "부서가 인사, 사원코드가 3000이하인 사원의 사원코드에 1000을 더하라.",
+            "choices": {
+                "1": "UPDATE 사원코드 SET 사원코드+ 1000 WHERE 부서=\"인사\" OR 사원코드<=3000;",
+                "2": "UPDATE 사원 SET 사원코드=사원코드+ 1000 WHERE 부서=\"인사\" OR 사원코드<=3000;",
+                "3": "UPDATE 사원코드 SET 사원코드+ 1000 WHERE 부서=\"인사\" AND 사원코드<=3000;",
+                "4": "UPDATE 사원 SET 사원코드=사원코드+ 1000 WHERE 부서=\"인사\" AND 사원코드<=3000;"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 55,
+            "question_type": "multiple_choice",
+            "question_description": "분산 데이터베이스의 장점으로 거리가 먼 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "지역 자치성이 높다.",
+                "2": "잠재적 오류가 감소한다.",
+                "3": "분산 제어가 가능하다.",
+                "4": "효용성과 융통성이 높다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 56,
+            "question_type": "multiple_choice",
+            "question_description": "다음 문장의 ( ) 안 내용으로 공통 적용될 수 있는 가장 적절한 내용은 무엇인가?",
+            "additional_content": "'관계형 데이터 모델에서 한 릴레이션의 ( )는 참조되는 릴레이션의 기본 키와 대응되어 릴레이션간에 참조 관계를 표현하는데 사용되는 중요한 도구이다. ( )를 포함하는 릴레이션이 참조하는 릴레이션이 되고, 대응되는 기본 키를 포함하는 릴레이션이 참조 릴레이션이 된다.'",
+            "choices": {
+                "1": "후보키(Candidate Key)",
+                "2": "대체키(Alternate Key)",
+                "3": "외래키(Foreign Key)",
+                "4": "수퍼키(Super Key)"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 57,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 트리거(Trigger)에 대한 설명으로 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "데이터 변경 및 무결성 유지, 로그 메시지 출력 등의 목적으로 사용된다.",
+                "2": "트리거의 생성문에는 반드시 값을 반환하는 RETURN 명령어가 사용되어야 한다.",
+                "3": "데이터의 삽입, 갱신, 삭제 등의 이벤트가 발생할 때마다 관련 작업이 자동으로 수행되는 절차형 SQL이다.",
+                "4": "CREATE TRIGGER 명령어를 통해 생성된다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 58,
+            "question_type": "multiple_choice",
+            "question_description": "데이터베이스의 특성으로 옳은 내용 모두를 나열한 것은?",
+            "additional_content": "㉠ 실시간 접근성\n㉡ 계속적인 변화\n㉢ 동시 공용\n㉣ 내용에 의한 참조",
+            "choices": {
+                "1": "㉠, ㉡",
+                "2": "㉠, ㉡, ㉢",
+                "3": "㉠, ㉡, ㉢, ㉣",
+                "4": "㉡, ㉢, ㉣"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 59,
+            "question_type": "multiple_choice",
+            "question_description": "DBMS의 필수 기능 중 사용자와 데이터베이스 사이의 인터페이스 수단을 제공하는 기능은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Definition 기능",
+                "2": "Control 기능",
+                "3": "Manipulation 기능",
+                "4": "Strategy 기능"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 3,
+            "question_number": 60,
+            "question_type": "multiple_choice",
+            "question_description": "뷰(View)에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "뷰는 CREATE 문을 사용하여 정의한다.",
+                "2": "뷰는 데이터의 논리적 독립성을 제공한다.",
+                "3": "뷰를 제거할 때에는 DROP 문을 사용한다.",
+                "4": "뷰는 저장장치 내에 물리적으로 존재한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 61,
+            "question_type": "multiple_choice",
+            "question_description": "개발에 필요한 환경 구축과 관련하여 하드웨어 환경과 관련이 없는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Eclipse",
+                "2": "Oracle DB",
+                "3": "WAS",
+                "4": "웹 서버"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 62,
+            "question_type": "multiple_choice",
+            "question_description": "UNIX에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "상당 부분 C 언어를 사용하여 작성되었으며, 이식성이 우수하다.",
+                "2": "사용자는 하나 이상의 작업을 백그라운드에서 수행할 수 있어 여러 개의 작업을 병행 처리할 수 있다.",
+                "3": "쉘(Shell)은 프로세스 관리, 기억장치 관리, 입출력 관리 등의 기능을 수행한다.",
+                "4": "두 사람 이상의 사용자가 동시에 시스템을 사용할 수 있어 정보와 유틸리티들을 공유하는 편리한 작업 환경을 제공한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 63,
+            "question_type": "multiple_choice",
+            "question_description": "C 또는 Java의 printf 명령어에서 키보드의 [Tab] 키와 같이 커서를 일정 간격 띄어주는데 사용하는 제어문자는?",
+            "additional_content": null,
+            "choices": {
+                "1": "\\r",
+                "2": "\\t",
+                "3": "\\b",
+                "4": "\\n"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 64,
+            "question_type": "multiple_choice",
+            "question_description": "다음 내용이 설명하는 결합도는?",
+            "additional_content": "한 모듈이 다른 모듈의 상세한 처리 절차를 알고 있어 이를 통제하는 경우나 처리 기능이 두 모듈에 분리되어 설계된 경우에 발생하며, 권리 전도 현상이 발생할 수 있다.",
+            "choices": {
+                "1": "제어 결합도",
+                "2": "스탬프 결합도",
+                "3": "외부 결합도",
+                "4": "내용 결합도"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 65,
+            "question_type": "multiple_choice",
+            "question_description": "OSI 참조 모델의 계층별 프로토콜 데이터 단위(PDU)의 연결이 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Physical Layer - Byte",
+                "2": "Data Link Layer - Frame",
+                "3": "Network Layer - Packet",
+                "4": "Application Layer - Message"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 66,
+            "question_type": "multiple_choice",
+            "question_description": "JAVA에서 힙(Heap)에 남아있으나 변수가 가지고 있던 참조값을 잃거나 변수 자체가 없어짐으로써 더 이상 사용되지 않는 객체를 제거해주는 역할을 하는 모듈은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Heap Collector",
+                "2": "Garbage Collector",
+                "3": "Memory Collector",
+                "4": "Variable Collector"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 67,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 연산자의 종류가 다른 하나는?",
+            "additional_content": null,
+            "choices": {
+                "1": "%",
+                "2": "/",
+                "3": "-",
+                "4": "++"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 68,
+            "question_type": "multiple_choice",
+            "question_description": "운영체제의 기능으로 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "개발에 필요한 여러 도구를 제공한다.",
+                "2": "자원 보호 기능을 제공한다.",
+                "3": "자원의 스케줄링 기능을 제공한다.",
+                "4": "사용자와 시스템 간의 편리한 인터페이스를 제공한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 69,
+            "question_type": "multiple_choice",
+            "question_description": "다음 Java 프로그램이 실행되었을 때의 결과는?",
+            "additional_content": "```java\npublic class Test {\n    public static void main(String[] args) {\n        int x = 7, y = 0;\n        while(x--> 0) {\n            if (x%3 == 0)\n                continue;\n            y++;\n        }\n        System.out.print(y);\n    }\n}\n```",
+            "choices": {
+                "1": "0",
+                "2": "4",
+                "3": "5",
+                "4": "7"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 70,
+            "question_type": "multiple_choice",
+            "question_description": "다음 C 언어 프로그램이 실행되었을 때의 결과는?",
+            "additional_content": "```c\n#include <stdio.h>\nmain() {\n    char* s = \"Sinagong\";\n    for (int i = 5; i > 0; i--)\n        printf(\"%c\", *(s + i));\n}\n```",
+            "choices": {
+                "1": "inago",
+                "2": "ogani",
+                "3": "sinagong",
+                "4": "gnoganis"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 71,
+            "question_type": "multiple_choice",
+            "question_description": "IEEE 802.3 LAN에서 사용되는 전송 매체 접속 제어(MAC) 방식은?",
+            "additional_content": null,
+            "choices": {
+                "1": "CSMA/CD",
+                "2": "Token Bus",
+                "3": "Token Ring",
+                "4": "Slotted Ring"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 72,
+            "question_type": "multiple_choice",
+            "question_description": "주기억장치보다 큰 사용자 프로그램을 실행하기 위한 기법으로, 보조기억장치에 저장된 하나의 프로그램을 여러 개의 조각으로 분할한 후 필요한 조각을 차례로 주기억장치에 적재하여 프로그램을 실행하는 할당 기법은?",
+            "additional_content": null,
+            "choices": {
+                "1": "오버레이",
+                "2": "스와핑",
+                "3": "페이징",
+                "4": "세그멘테이션"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 73,
+            "question_type": "multiple_choice",
+            "question_description": "배치 프로그램의 자동 수행 주기 중 사용자가 특정 조건을 설정해두고 해당 조건이 충족될 때만 수행되도록 하는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "정기 배치",
+                "2": "이벤트성 배치",
+                "3": "On-Demand 배치",
+                "4": "사용자 배치"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 74,
+            "question_type": "multiple_choice",
+            "question_description": "다음은 어떤 프로그램 구조를 나타낸다. 모듈 F에서의 Fan-In과 Fan-Out의 수는 얼마인가?",
+            "additional_content": "```mermaid\ngraph TD\n    A --> B\n    A --> C\n    A --> D\n    B --> E\n    C --> E\n    C --> F\n    D --> F\n    E --> G\n    F --> G\n    F --> H\n```",
+            "choices": {
+                "1": "Fan-In: 2, Fan-Out: 3",
+                "2": "Fan-In: 3, Fan-Out: 2",
+                "3": "Fan-In: 1, Fan-Out: 2",
+                "4": "Fan-In: 2, Fan-Out: 1"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 75,
+            "question_type": "multiple_choice",
+            "question_description": "다음은 Java로 만들어진 반복문 코드이다. 이 코드의 결과는?",
+            "additional_content": "```java\n..생략..\nint a = 0, sum = 0;\ndo {\n    a++;\n    sum += a;\n} while(a > 10);\n..생략..\n```",
+            "choices": {
+                "1": "a = 0, sum = 0",
+                "2": "a = 1, sum = 1",
+                "3": "a = 9, sum = 45",
+                "4": "a = 10, sum = 55"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 76,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 Java에서 표준 출력 시 사용하는 명령어가 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "prn",
+                "2": "print",
+                "3": "printf",
+                "4": "println"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 77,
+            "question_type": "multiple_choice",
+            "question_description": "스크립트(Script) 언어가 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "PHP",
+                "2": "Fortran",
+                "3": "Basic",
+                "4": "Python"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 78,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 페이지 교체(Page Replacement) 알고리즘이 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "LRU",
+                "2": "OPT",
+                "3": "NUR",
+                "4": "SCF"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 79,
+            "question_type": "multiple_choice",
+            "question_description": "다음 Java 프로그램이 실행되었을 때, 실행 결과는?",
+            "additional_content": "```java\npublic class Test {\n    public static void main(String args[]) {\n        String str = \"Message Queueing\";\n        char s[] = str.toCharArray();\n        int r = 0;\n        for (char c:s)\n            if (c == 'e')\n                r++;\n        System.out.print(r);\n    }\n}\n```",
+            "choices": {
+                "1": "2",
+                "2": "3",
+                "3": "4",
+                "4": "5"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 4,
+            "question_number": 80,
+            "question_type": "multiple_choice",
+            "question_description": "네트워크 계층까지의 프로토콜 구조가 다른 네트워크 간의 연결을 위해 프로토콜 변환 기능을 수행하는 네트워크 장비는 무엇인가?",
+            "additional_content": null,
+            "choices": {
+                "1": "리피터",
+                "2": "브리지",
+                "3": "라우터",
+                "4": "게이트웨이"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 81,
+            "question_type": "multiple_choice",
+            "question_description": "소프트웨어 개발에서 정보보안 3요소에 해당하지 않는 설명은?",
+            "additional_content": null,
+            "choices": {
+                "1": "기밀성 : 인가된 사용자에 대해서만 자원 접근이 가능하다.",
+                "2": "무결성 : 인가된 사용자에 대해서만 자원 수정이 가능하며 전송 중인 정보는 수정되지 않는다.",
+                "3": "가용성 : 인가된 사용자는 가지고 있는 권한 범위 내에서 언제든 자원 접근이 가능하다.",
+                "4": "휘발성 : 인가된 사용자가 수행한 데이터는 처리 완료 즉시 폐기되어야 한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 82,
+            "question_type": "multiple_choice",
+            "question_description": "시스템이 몇 대가 되어도 하나의 시스템에서 인증에 성공하면 다른 시스템에 대한 접근 권한도 얻는 시스템을 의미하는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "SOS",
+                "2": "SBO",
+                "3": "SSO",
+                "4": "SOA"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 83,
+            "question_type": "multiple_choice",
+            "question_description": "COCOMO 모형에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "원시 프로그램의 규모인 LOC에 의한 비용 산정 기법이다.",
+                "2": "30만 라인 이상의 소프트웨어에서는 내장형 방식을 이용하여 비용을 산정한다.",
+                "3": "중간형은 개발 공정별로 보다 자세하고 정확하게 노력을 산출하여 비용을 산정하는 모형이다.",
+                "4": "사무 처리용, 업무용 등의 소규모 소프트웨어의 비용 산정에는 조직형 산정 모델을 사용하는 것이 적합하다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 84,
+            "question_type": "multiple_choice",
+            "question_description": "다음 Java 코드에서 밑줄로 표시된 부분에는 어떤 보안 약점이 존재하는가?",
+            "additional_content": "```java\npublic static void main(String[] args) {\n    int a = 5;\n    a = func(a);\n}\nstatic int func(int a) {\n    return a <= 5 ? func(a): 3; // Underlined part\n}\n```",
+            "choices": {
+                "1": "종료되지 않는 반복문 또는 재귀함수",
+                "2": "널 포인터 역참조",
+                "3": "하드코드된 암호화 키 사용",
+                "4": "초기화되지 않은 변수 사용"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 85,
+            "question_type": "multiple_choice",
+            "question_description": "SAN(Storage Area Network)에 대한 설명으로 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "서버와 저장 장치를 연결하는 전용 네트워크를 별도로 구성하는 방식이다.",
+                "2": "파이버 채널(FC) 스위치를 이용하여 네트워크를 구성한다.",
+                "3": "서버들이 저장장치 및 파일을 공유할 수 있다.",
+                "4": "초기 설치 시 소요되는 비용을 절약할 수 있다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 86,
+            "question_type": "multiple_choice",
+            "question_description": "해시(Hash)에 대한 설명으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "해시 알고리즘으로 변환된 값이나 키를 해시값 또는 해시키라고 부른다.",
+                "2": "고정된 길이의 입력 데이터나 메시지를 임의의 길이의 값이나 키로 변환한다.",
+                "3": "데이터의 암호화, 무결성 검증을 위해 사용될 뿐만 아니라 정보 보호의 다양한 분야에서 활용된다.",
+                "4": "대표적인 해시 알고리즘에는 SHA 시리즈, MD 시리즈 등이 있다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 87,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 소유 기반 인증(Something you have) 방법에 해당하지 않는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "i-PIN",
+                "2": "OTP",
+                "3": "스마트 카드",
+                "4": "신분증"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 88,
+            "question_type": "multiple_choice",
+            "question_description": "기존 무선 랜의 한계 극복을 위해 등장하였으며, 대규모 디바이스의 네트워크 생성에 최적화되어 차세대 이동통신, 홈네트워킹, 공공 안전 등의 특수목적에 사용되는 새로운 방식의 네트워크 기술을 의미하는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "Mesh Network",
+                "2": "Virtual Private Network",
+                "3": "Local Area Network",
+                "4": "Software Defined Perimeter"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 89,
+            "question_type": "multiple_choice",
+            "question_description": "개인키 암호화 기법으로 옳지 않은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "DES",
+                "2": "ARIA",
+                "3": "SEED",
+                "4": "RSA"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 90,
+            "question_type": "multiple_choice",
+            "question_description": "수동적인 네트워크 침해 공격의 하나로, 네트워크의 중간에서 남의 패킷 정보를 도청하는 해킹 유형은?",
+            "additional_content": null,
+            "choices": {
+                "1": "스니핑(Sniffing)",
+                "2": "스미싱(Smishing)",
+                "3": "피싱(Phishing)",
+                "4": "백도어(Back Door)"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 91,
+            "question_type": "multiple_choice",
+            "question_description": "다음 괄호에 공통으로 들어갈 용어는 무엇인가?",
+            "additional_content": "( )는 일련의 데이터를 정의하고 설명해 주는 데이터로, 컴퓨터에서는 데이터 사전의 내용, 스키마 등을 의미한다.( )는 여러 용도로 사용되나 주로 빠르게 검색하거나 내용을 간략하고 체계적으로 하기 위해 많이 사용된다.",
+            "choices": {
+                "1": "View",
+                "2": "Broad Data",
+                "3": "Big Data",
+                "4": "Meta Data"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 92,
+            "question_type": "multiple_choice",
+            "question_description": "다음에서 설명하는 IT 기술은?",
+            "additional_content": "• 네트워크를 제어부, 데이터 전달부로 분리하여 네트워크 관리자가 보다 효율적으로 네트워크를 제어, 관리할 수 있는 기술\n• 기존의 라우터, 스위치 등과 같이 하드웨어에 의존하는 네트워크 체계에서 안정성, 속도, 보안 등을 소프트웨어로 제어, 관리하기 위해 개발됨\n• 네트워크 장비의 펌웨어 업그레이드를 통해 사용자의 직접적인 데이터 전송 경로 관리가 가능하고, 기존 네트워크에는 영향을 주지 않으면서 특정 서비스의 전송 경로 수정을 통하여 인터넷상에서 발생하는 문제를 처리할 수 있음",
+            "choices": {
+                "1": "SDN(Software Defined Networking)",
+                "2": "NFS(Network File System)",
+                "3": "Network Mapper",
+                "4": "AOE Network"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 93,
+            "question_type": "multiple_choice",
+            "question_description": "정보 보안을 위한 접근통제 정책 종류에 해당하지 않는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "임의적 접근통제",
+                "2": "데이터 전환 접근통제",
+                "3": "강제적 접근통제",
+                "4": "역할 기반 접근통제"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 94,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 병행수행으로 발생할 수 있는 문제점이 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "갱신 분실(Lost Update)",
+                "2": "완료 의존성(Committed Dependency)",
+                "3": "모순성(Inconsistency)",
+                "4": "연쇄 복귀(Cascading Rollback)"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 95,
+            "question_type": "multiple_choice",
+            "question_description": "다음 빈 칸에 알맞은 기술은?",
+            "additional_content": "( )은/는 필요한 모든 것에 RFID 태그를 부착하여 수집한 정보를 무선으로 수집할 수 있도록 구성한 네트워크이다.",
+            "choices": {
+                "1": "GIS",
+                "2": "SON",
+                "3": "USN",
+                "4": "UWB"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 96,
+            "question_type": "multiple_choice",
+            "question_description": "소프트웨어 재공학(Reengineering)에 대한 설명으로 틀린 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "기존 시스템을 이용하여 보다 나은 시스템을 구축하는 것이다.",
+                "2": "유지보수 비용의 최소화를 위해 유지보수성과 품질을 향상시키는 것을 목적으로 한다.",
+                "3": "소프트웨어 위기를 해결하는 방법 중 하나로 꼽힌다.",
+                "4": "소프트웨어의 수명이 연장되지만, 개발 비용이 증가한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 97,
+            "question_type": "multiple_choice",
+            "question_description": "다음 중 양방향 암호화 방식이 아닌 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "DES",
+                "2": "SEED",
+                "3": "RSA",
+                "4": "HASH"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 98,
+            "question_type": "multiple_choice",
+            "question_description": "데이터 다이어트(Data Diet)에 대한 설명으로 옳은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "대용량 데이터를 분산 처리하기 위한 목적으로 개발된 프로그래밍 모델이다.",
+                "2": "데이터를 압축하고, 중복된 정보는 중복을 배제하고, 새로운 기준에 따라 나누어 저장하는 작업이다.",
+                "3": "데이터 집합에서 사용자의 요구에 따라 유용하고 가능성 있는 정보를 발견하기 위한 기법이다.",
+                "4": "기존의 관리 방법이나 분석 체계로는 처리하기 어려운 막대한 양의 정형 또는 비정형 데이터 집합을 의미한다."
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 99,
+            "question_type": "multiple_choice",
+            "question_description": "테일러링(Tailoring) 개발 방법론의 내부 기준에 해당하지 않는 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "납기/비용",
+                "2": "기술 환경",
+                "3": "구성원 능력",
+                "4": "국제 표준 품질 기준"
+            },
+            "score": 1
+        },
+        {
+            "category_id": 5,
+            "question_number": 100,
+            "question_type": "multiple_choice",
+            "question_description": "OWASP(the Open Web Application Security Project)에 대한 설명으로 옳은 것은?",
+            "additional_content": null,
+            "choices": {
+                "1": "P2P 네트워크를 이용하여 온라인 금융 거래 정보를 온라인 네트워크 참여자(Peer)의 디지털 장비에 분산 저장하는 기술이다.",
+                "2": "대표적인 사례로 블록체인(Blockchain)이 있다.",
+                "3": "양자 통신을 위해 비밀키를 분배하여 관리하는 기술이다.",
+                "4": "웹 정보 노출이나 악성 코드, 스크립트, 보안이 취약한 부분을 연구하는 비영리 단체이다."
+            },
+            "score": 1
+        }
+    ]
+};

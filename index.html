@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보처리기사 필기 문제</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="data/exam-202401.js"></script>
+    <script src="data/exam-202402.js"></script>
+    <script src="data/exam-202403.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2024년 정보처리기사 필기 기출문제</h1>
+            <p>2024년 1회차, 2회차, 3회차 기출문제를 풀어보세요</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-exam="202401">2024년 1회차</button>
+            <button class="tab" data-exam="202402">2024년 2회차</button>
+            <button class="tab" data-exam="202403">2024년 3회차</button>
+        </div>
+
+        <div class="content">
+            <div id="loading" class="loading">
+                <h3>문제를 불러오는 중...</h3>
+            </div>
+
+            <div id="error" class="error" style="display: none;">
+                <h3>문제를 불러오는데 실패했습니다.</h3>
+                <p>페이지를 새로고침해주세요.</p>
+            </div>
+
+            <div id="questions-list" style="display: none;">
+                <!-- 모든 문제가 여기에 표시됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class ExamManager {
+            constructor() {
+                this.currentExam = '202401';
+                this.examData = {};
+                this.userAnswers = {};
+                
+                this.initializeMermaid();
+                this.initializeEventListeners();
+                this.loadExamData();
+            }
+
+            initializeMermaid() {
+                mermaid.initialize({
+                    startOnLoad: false,
+                    theme: 'default',
+                    flowchart: {
+                        useMaxWidth: true,
+                        htmlLabels: true
+                    }
+                });
+            }
+
+            initializeEventListeners() {
+                // 탭 이벤트
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        this.switchExam(e.target.dataset.exam);
+                    });
+                });
+            }
+
+            loadExamData() {
+                try {
+                    // 각 회차별 데이터를 객체로 구성
+                    this.examData = {
+                        '202401': EXAM_DATA_202401,
+                        '202402': EXAM_DATA_202402,
+                        '202403': EXAM_DATA_202403
+                    };
+                    this.showAllQuestions();
+                } catch (error) {
+                    console.error('Error loading exam data:', error);
+                    this.showError();
+                }
+            }
+
+            switchExam(examId) {
+                // 탭 활성화
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                document.querySelector(`[data-exam="${examId}"]`).classList.add('active');
+
+                this.currentExam = examId;
+                this.userAnswers = {};
+                this.showAllQuestions();
+            }
+
+            showAllQuestions() {
+                const exam = this.examData[this.currentExam];
+                if (!exam) return;
+
+                const questionsListContainer = document.getElementById('questions-list');
+                questionsListContainer.innerHTML = '';
+
+                let currentCategoryId = null;
+
+                exam.questions.forEach((question, index) => {
+                    const category = exam.categories.find(cat => cat.id === question.category_id);
+                    
+                    // 새로운 카테고리가 시작될 때 카테고리 헤더 추가
+                    if (currentCategoryId !== question.category_id) {
+                        const categoryHeader = this.createCategoryHeader(category);
+                        questionsListContainer.appendChild(categoryHeader);
+                        currentCategoryId = question.category_id;
+                    }
+
+                    const questionDiv = this.createQuestionElement(question, category, index);
+                    questionsListContainer.appendChild(questionDiv);
+                });
+
+                // 로딩 및 에러 숨기기
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'none';
+                document.getElementById('questions-list').style.display = 'block';
+            }
+
+            createCategoryHeader(category) {
+                const categoryHeader = document.createElement('div');
+                categoryHeader.className = 'category-header';
+                categoryHeader.innerHTML = `
+                    <h2>${category.name}</h2>
+                    <p>문제 ${category.range.start}번 ~ ${category.range.end}번</p>
+                `;
+                return categoryHeader;
+            }
+
+            createQuestionElement(question, category, questionIndex) {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question-item';
+                questionDiv.dataset.questionIndex = questionIndex;
+
+                const questionHeader = document.createElement('div');
+                questionHeader.className = 'question-header';
+                questionHeader.innerHTML = `
+                    <div class="question-info">
+                        <div class="question-number">${question.question_number}번 문제</div>
+                        <div class="question-description">${question.question_description}</div>
+                    </div>
+                `;
+
+                const questionContent = document.createElement('div');
+                questionContent.className = 'question-content';
+                
+                if (question.additional_content) {
+                    const additionalContentDiv = document.createElement('div');
+                    additionalContentDiv.className = 'additional-content';
+                    
+                    // Markdown 파싱 전에 Mermaid 코드 블록을 HTML로 변환
+                    let processedContent = this.processMermaidCodeBlocks(question.additional_content);
+                    additionalContentDiv.innerHTML = marked.parse(processedContent);
+                    questionContent.appendChild(additionalContentDiv);
+                    
+                    // Mermaid 다이어그램 렌더링
+                    this.renderMermaidDiagrams(additionalContentDiv);
+                }
+
+                const choicesContainer = document.createElement('div');
+                choicesContainer.className = 'choices';
+                this.renderChoicesForQuestion(choicesContainer, question.choices, questionIndex);
+
+                questionDiv.appendChild(questionHeader);
+                questionDiv.appendChild(questionContent);
+                questionDiv.appendChild(choicesContainer);
+
+                return questionDiv;
+            }
+
+            renderChoicesForQuestion(choicesContainer, choices, questionIndex) {
+                Object.entries(choices).forEach(([number, text]) => {
+                    const choiceDiv = document.createElement('div');
+                    choiceDiv.className = 'choice';
+                    choiceDiv.dataset.choice = number;
+                    choiceDiv.dataset.questionIndex = questionIndex;
+
+                    const isSelected = this.userAnswers[questionIndex] === number;
+                    if (isSelected) {
+                        choiceDiv.classList.add('selected');
+                    }
+
+                    choiceDiv.innerHTML = `
+                        <div class="choice-number">${number}</div>
+                        <div class="choice-text">${text}</div>
+                    `;
+
+                    choiceDiv.addEventListener('click', () => {
+                        this.selectChoiceForQuestion(number, questionIndex);
+                    });
+
+                    choicesContainer.appendChild(choiceDiv);
+                });
+            }
+
+            selectChoiceForQuestion(choiceNumber, questionIndex) {
+                // 해당 문제의 기존 선택 해제
+                document.querySelectorAll(`[data-question-index="${questionIndex}"] .choice`).forEach(choice => {
+                    choice.classList.remove('selected');
+                });
+
+                // 새 선택 활성화
+                document.querySelector(`[data-question-index="${questionIndex}"][data-choice="${choiceNumber}"]`).classList.add('selected');
+                
+                // 사용자 답안 저장
+                this.userAnswers[questionIndex] = choiceNumber;
+            }
+
+            processMermaidCodeBlocks(content) {
+                // ```mermaid 코드 블록을 찾아서 HTML로 변환
+                return content.replace(/```mermaid\s*([\s\S]*?)\s*```/g, (match, code) => {
+                    return `<div class="mermaid">${code.trim()}</div>`;
+                });
+            }
+
+            renderMermaidDiagrams(container) {
+                const mermaidElements = container.querySelectorAll('.mermaid');
+                mermaidElements.forEach(async (element, index) => {
+                    try {
+                        const graphDefinition = element.textContent;
+                        const { svg } = await mermaid.render(`mermaid-${Date.now()}-${index}`, graphDefinition);
+                        element.innerHTML = svg;
+                    } catch (error) {
+                        console.error('Mermaid rendering error:', error);
+                        element.innerHTML = '<p style="color: red;">다이어그램 렌더링 오류</p>';
+                    }
+                });
+            }
+
+            showError() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('questions-list').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+
+        // 페이지 로드 시 ExamManager 초기화
+        document.addEventListener('DOMContentLoaded', () => {
+            new ExamManager();
+        });
+    </script>
+</body>
+</html>
