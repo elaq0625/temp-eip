@@ -11,16 +11,18 @@
     <script src="data/exam-202402.js"></script>
     <script src="data/exam-202403.js"></script>
     <script src="data/exam-202004.js"></script>
+    <script src="data/exam-202003.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>정보처리기사 필기 기출문제</h1>
-            <p>2020년 4회차, 2024년 1회차, 2회차, 3회차 기출문제를 풀어보세요</p>
+            <p>2020년 3회차, 4회차, 2024년 1회차, 2회차, 3회차 기출문제를 풀어보세요</p>
         </div>
 
         <div class="tabs">
-            <button class="tab active" data-exam="202004">2020년 4회차</button>
+            <button class="tab active" data-exam="202003">2020년 3회차</button>
+            <button class="tab" data-exam="202004">2020년 4회차</button>
             <button class="tab" data-exam="202401">2024년 1회차</button>
             <button class="tab" data-exam="202402">2024년 2회차</button>
             <button class="tab" data-exam="202403">2024년 3회차</button>
@@ -45,7 +47,7 @@
     <script>
         class ExamManager {
             constructor() {
-                this.currentExam = '202004';
+                this.currentExam = '202003';
                 this.examData = {};
                 this.userAnswers = {};
                 
@@ -78,6 +80,7 @@
                 try {
                     // 각 회차별 데이터를 객체로 구성
                     this.examData = {
+                        '202003': EXAM_DATA_202003,
                         '202004': EXAM_DATA_202004,
                         '202401': EXAM_DATA_202401,
                         '202402': EXAM_DATA_202402,
