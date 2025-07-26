@@ -40,24 +40,48 @@ body {
 .tabs {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 10px;
+    padding: 20px;
+    gap: 30px;
+}
+
+.year-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.year-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    padding: 5px 15px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.round-tabs {
+    display: flex;
+    gap: 5px;
 }
 
 .tab {
-    padding: 15px 30px;
-    margin: 0 5px;
+    padding: 12px 20px;
     border: none;
     background: transparent;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     transition: all 0.3s ease;
     color: #666;
+    min-width: 60px;
 }
 
 .tab.active {
@@ -456,10 +480,24 @@ body {
     
     .tabs {
         flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .year-group {
+        width: 100%;
+    }
+
+    .round-tabs {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     
     .tab {
-        margin: 2px 0;
+        flex: 1;
+        min-width: 80px;
+        margin: 2px;
     }
     
     .question-header {
